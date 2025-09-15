@@ -1,4 +1,5 @@
 
+ddt <- read.csv("DDT.csv")
 L <- ddt$LENGTH
 z <- (L - mean(L))/(sd(L))
 z
@@ -8,3 +9,4 @@ ddt[z > 3,]
 ddt[abs(z) > 3,]
 # Possible outliers
 ddt[abs(z) > 2 & abs(z) <=3,]
+
