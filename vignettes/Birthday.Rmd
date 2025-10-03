@@ -1,0 +1,58 @@
+---
+title: "Birthday"
+author: "Payton Schulte"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Birthday}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4753F25paytonsch)
+```
+
+# 1. Derivation
+$A =$ 2 or more people have the same birthday.\
+$\overline{A} =$ every student has a different birthday.
+
+$$
+1 = P(A) + P(\overline{A})\\
+\overline{A}: 365,\:364,\:363\cdots\:!n\\
+P(\overline{A}) = \frac{365*364\cdots\,(365-n+1)}{365^{-n}}\\
+P(A) = 1 - \frac{365*364\cdots\,(365-n+1)}{365^{n}}\\
+$$
+
+# 2. Reformulation
+
+$$
+{}_{365}P_{n} = n!* _{365}C_{n}\\
+P(\overline{A}) = \frac{(_{365}P_n)}{365^n}\\
+P(A) = 1 - P(\overline{A})\\
+P(A) = 1 - e^{\log(P(\overline{A}))}\\
+P(A) = 1 - e^{lfactorial(n) + lchoose(365,n) - n\log(365)}\\
+\log(P(\overline{A})) = \log^{365P}_n - n\log(365)\\
+\log(P(\overline{A})) = \log(n!) + \log(choose(365,n)) - n\log(365)\\
+\log(P(\overline{A})) = lfactorial(n) + lchoose(365,n)-n\log(365)
+$$
+
+# 3. Function Body
+```{r}
+body(birthday)
+```
+
+# 4. Called Function
+```{r}
+birthday(x = 20:25)
+```
+
+
+

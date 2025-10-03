@@ -16,3 +16,7 @@ LazyData: true
 RoxygenNote: 7.3.3
 URL: https://github.com/paschulte/MATH4753F25paytonsch
 BugReports: https://github.com/paschulte/MATH4753F25paytonsch/issues
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
