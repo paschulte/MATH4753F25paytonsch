@@ -2,9 +2,9 @@
 #'
 #' Creates iter barplots at a rate of 1 per time with a sample size n
 #'
-#' @param n
-#' @param iter
-#' @param time
+#' @param n Numeric. Sample size for each iteration.
+#' @param iter Integer. Number of iterations (barplots) to generate.
+#' @param time Numeric. Pause time (in seconds) between iterations.
 #'
 #' @returns barplot
 #' @export

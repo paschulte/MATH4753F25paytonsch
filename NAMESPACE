@@ -3,7 +3,6 @@
 export(birthday)
 export(chebyshev)
 export(myfirstfunction)
-export(mysample)
 export(mysum)
 export(scatterhist)
 export(testsample)

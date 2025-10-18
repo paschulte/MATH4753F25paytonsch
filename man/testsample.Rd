@@ -7,7 +7,11 @@
 testsample(n, iter = 10, time = 0.5)
 }
 \arguments{
-\item{time}{}
+\item{n}{Numeric. Sample size for each iteration.}
+
+\item{iter}{Integer. Number of iterations (barplots) to generate.}
+
+\item{time}{Numeric. Pause time (in seconds) between iterations.}
 }
 \value{
 barplot
