@@ -2,11 +2,13 @@
 
 export(birthday)
 export(chebyshev)
+export(mycltu)
 export(myfirstfunction)
 export(myncurve)
 export(mysum)
 export(ntickets)
 export(scatterhist)
+export(shinymle)
 export(testsample)
 importFrom(graphics,abline)
 importFrom(graphics,barplot)
