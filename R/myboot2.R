@@ -39,5 +39,5 @@ myboot2<-function(iter=10000,x,fun="mean",alpha=0.05,cx=1.5,...){
   text(ci[2],0,paste(round(ci[2],2),")",sep=""),col="Red",cex=cx)
   # plots the point estimate 1/2 way up the density
   text(pte,max(para$density)/2,round(pte,2),cex=cx)
-  invisible(list(ci=ci,fun=fun,x=x))
+  return(list(ci=ci,fun=fun,x=x))
 }

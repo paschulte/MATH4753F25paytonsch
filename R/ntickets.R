@@ -7,7 +7,7 @@
 #' @importFrom stats qbinom pbinom qnorm
 #' @importFrom graphics abline barplot points
 #'
-#' @returns a list of nc, nd, N, p, gamma. a plot is alos returned
+#' @returns a list of nc, nd, N, p, gamma. a plot is also returned
 #' @export
 #'
 #' @examples

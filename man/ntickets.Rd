@@ -14,7 +14,7 @@ ntickets(N, gamma, p)
 \item{p}{the probability that a passanger will show up for flight}
 }
 \value{
-a list of nc, nd, N, p, gamma. a plot is alos returned
+a list of nc, nd, N, p, gamma. a plot is also returned
 }
 \description{
 ntickets
