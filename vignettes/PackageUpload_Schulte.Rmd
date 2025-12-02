@@ -1,0 +1,99 @@
+---
+title: "Package Upload: MATH 4753"
+author: "Payton Schulte"
+date: "`r Sys.Date()`"
+output:   
+  html_document:
+    df_print: paged
+    fig_caption: true
+    highlights: pygments
+    number_sections: no
+    theme: spacelab
+    toc: yes
+    toc_float: yes
+vignette: >
+  %\VignetteIndexEntry{Package Upload}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+> This package contains functions and data from the course MATH-4753 Fall 2025 semester. 
+
+# 1. ntickets() function
+
+This function calculates how many airline tickets should be sold to keep the probability of overbooking to a certain risk level. The inputs for the function are:
+
+* N - the number of seats on the plane
+* gamma - the probability of overbooking
+* p - the probability a passenger arrives
+
+The outputs for the function are:
+
+* nd - the optimal number of tickets to sell using discrete method
+* nc - the optimal number of tickets to sell using continuous method
+* N - the number of seats on the plane
+* p - the probability a passenger arrives
+* gamma - the probability of overbooking
+
+```{r}
+MATH4753F25paytonsch::ntickets(N = 100, gamma = 0.5, p = 0.95)
+```
+
+# 2. chebyshev() function
+
+This function calculates the minimum proportion of data that must fall within k standard deviations of the mean according to Chebyshev's Theorem. The input for the function is:
+
+* k - a numerical value greater than 1 representing number of standard deviations from the mean
+
+The output for the function is:
+
+* The minimum proportion of data within k standard deviations of the mean
+
+```{r}
+MATH4753F25paytonsch::chebyshev(2)
+```
+
+# 3. myboot2() function
+
+This function performs a bootstrap simulation, plots the result, and calculates a confidence interval. The inputs for the function are:
+
+* iter - the number of bootstrap resamples
+* x - data vector
+* fun - type of statistic, ie. mean, median
+* alpha - significance level for confidence interval
+* cx - plot size
+* ... - any other arguments
+
+The outputs for the function are:
+
+* ci - bootstrap confidence interval
+* fun - the statistic used
+* x - the original data vector
+
+```{r}
+x <- rnorm(30)
+print(MATH4753F25paytonsch::myboot2(iter=10000, x = x, fun="mean", alpha=0.05, cx=1.5))
+```
+
+# 4. myncurve() function
+
+This function plots a normal density curve and shades the area under the curve to value a. The inputs for the function are:
+
+* mu - the mean of the normal distribution
+* sigma - the standard deviation
+* a - the upper bound of the shaded region
+
+The outputs for the function are:
+
+* mu - the mean of the normal distribution
+* sigma - the standard deviation
+* a - the upper bound of the shaded region
+* probability - the probability of X being less than a
+
+```{r}
+MATH4753F25paytonsch::myncurve(mu = 10, sigma = 2, a = 8)
+```
